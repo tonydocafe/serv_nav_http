@@ -93,7 +93,7 @@ Para acessar a interface do servidor:
 - Acessar servidor na mesma máquina — clique no link:  
   [http://localhost:8080/arquivo](http://localhost:8080/arquivo)
 
-- Acessar servidor em outra máquina na mesma rede — substitua `IP_DO_SERVIDOR` pelo IP da máquina que está rodando o servidor e clique:  
+- Acessar servidor em outra máquina na mesma rede — substitua `IP_DO_SERVIDOR` pelo IP da máquina que está rodando o servidor:  
   [http://IP_DO_SERVIDOR:8080/arquivo](http://IP_DO_SERVIDOR:8080/arquivo)
 
 - Para conferir o IP da máquina (ex.: 192.168.x.x), execute no terminal:
