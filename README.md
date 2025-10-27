@@ -32,6 +32,7 @@ O servidor continua ativo, respondendo a novos pedidos e permitindo acessar de f
 - [2. Servidor HTTP](#2-servidor-http-meu_servidorc)
 - [3. Compilação](#3-compilação-makefile)
 - [4. Uso](#4-uso-executavel)
+- [5. Acesso](#5-acesso-porta_8080)
 ---
 ### Requisitos
 
@@ -85,18 +86,18 @@ make
 
 ```
 
-## 5. Acesso (porta 8080)
+## 5. Acesso (`porta_8080`)
 
-Para acessar a interface do servidor localmente :
+Para acessar a interface do servidor:
 
+- Acessar servidor na mesma máquina — clique no link:  
+  [http://localhost:8080/arquivo](http://localhost:8080/arquivo)
+
+- Acessar servidor em outra máquina na mesma rede — substitua `IP_DO_SERVIDOR` pelo IP da máquina que está rodando o servidor e clique:  
+  [http://IP_DO_SERVIDOR:8080/arquivo](http://IP_DO_SERVIDOR:8080/arquivo)
+
+- Para conferir o IP da máquina (ex.: 192.168.x.x), execute no terminal:
 ```bash
-# Acessar servidor na mesma máquina link 
-  http://localhost:8080/arquivo
-
-# Acessar servidor em outra maquina na mesma rede
-http://ip_da_maquina_que_esta_o_servidor:8080/arquivo
-
-# Para conferir o IP da maquina (192.68. ...) 
 hostname -I
 
 
