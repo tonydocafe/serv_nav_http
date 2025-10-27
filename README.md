@@ -34,3 +34,14 @@ gcc meu_navegador.c -o meu_navegador
 
 # Compilar servidor
 gcc meu_servidor.c -o meu_servidor
+
+```
+
+## 🔧 Compilação Manual
+
+```bash
+# Compilar navegador
+gcc meu_navegador.c -o meu_navegador
+
+# Compilar servidor
+gcc meu_servidor.c -o meu_servidor
