@@ -37,11 +37,14 @@ gcc meu_servidor.c -o meu_servidor
 
 ```
 
-## 🔧 Compilação Manual
+## Uso 
 
 ```bash
-# Compilar navegador
-gcc meu_navegador.c -o meu_navegador
+# executar navegador
+./meu_navegador <URL>
+
+# executar servidor
+./meu_servidor <diretorio>
 
 # Compilar servidor
 gcc meu_servidor.c -o meu_servidor
