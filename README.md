@@ -15,6 +15,8 @@ Este repositório contém dois projetos em C que implementam um **navegador HTTP
 - Sistema com suporte a sockets (Linux).
 - Compilador C (ex.: `gcc`).
 
+---
+
 ## 1. Navegador HTTP (`meu_navegador.c`)
 
 ### Funcionalidade
@@ -48,13 +50,13 @@ make
 
 ```
 
-## 🤖 Uso 
+## 4. Uso (`./`)
 
 ```bash
-# executar navegador
+# executar navegador -> nav/
 ./meu_navegador <URL>
 
-# executar servidor
+# executar servidor -> serv/
 ./meu_servidor <diretorio>
 
 ```
