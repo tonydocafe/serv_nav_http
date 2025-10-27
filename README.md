@@ -9,7 +9,7 @@ Este repositório contém dois projetos em C que implementam um **navegador HTTP
 - [1. Navegador HTTP](#1-navegador-http-meu_navegadorc)
 - [2. Servidor HTTP](#2-servidor-http-meu_servidorc)
 - [3. Compilação](#3-compilação-makefile)
-- [4. Uso](#4-uso-./)
+- [4. Uso](#4-uso-executavel)
 ---
 ### Requisitos
 
@@ -51,7 +51,7 @@ make
 
 ```
 
-## 4. Uso (`./`)
+## 4. Uso (`executavel`)
 
 ```bash
 # executar navegador -> nav/
