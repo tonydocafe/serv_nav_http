@@ -18,7 +18,7 @@ O **servidor HTTP** funciona como um servidor de páginas, permitindo que client
 
 Ele recebe o caminho do diretório e espera conexões, lendo os pedidos feitos pelos clientes.
 
-Se o arquivo solicitado existir, ele é enviado; se houver um diretório sem index.html, o servidor gera uma página listando os arquivos disponíveis.
+Se o arquivo solicitado existir, ele é enviado, se houver um diretório sem index.html, o servidor gera uma página listando os arquivos disponíveis.
 
 Em caso de erro, como arquivo não encontrado, uma mensagem é enviada.
 
