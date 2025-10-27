@@ -82,5 +82,24 @@ make
 # executar servidor -> serv/
 ./meu_servidor <diretorio>
 
+
+```
+
+## 5. Acesso (porta 8080)
+
+Para acessar a interface do servidor localmente :
+
+```bash
+# Acessar servidor na mesma máquina link 
+  http://localhost:8080/arquivo
+
+# Acessar servidor em outra maquina na mesma rede
+http://ip_da_maquina_que_esta_o_servidor:8080/arquivo
+
+# Para conferir o IP da maquina (192.68. ...) 
+hostname -I
+
+
+
 ```
 
