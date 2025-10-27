@@ -1,19 +1,17 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -O2
-TARGET = meu_navegador
-SRC = meu_navegador.c
 
-all: $(TARGET)
+all: meu_navegador
 
-$(TARGET): $(SRC)
-	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
-
-run:
-	./$(TARGET) http://example.com
+meu_navegador: meu_navegador.c
+	$(CC) $(CFLAGS) -o meu_navegador meu_navegador.c
 
 clean:
-	rm -f $(TARGET)
-	rm -f index.html
-	rm -f *.png *.jpg *.jpeg *.gif *.html *.json *.txt
+	
+	@for file in *; do \
+		if [ "$$file" != "Makefile" ] && [ "$$file" != "meu_navegador.c" ]; then \
+			rm -rf "$$file"; \
+		fi; \
+	done
 
-.PHONY: all run clean
+.PHONY: all clean
