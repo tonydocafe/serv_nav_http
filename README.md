@@ -1,6 +1,17 @@
 # Projetos em C: Navegador e Servidor HTTP
 
-Este repositório contém dois projetos em C que implementam um **navegador HTTP** e um **servidor HTTP** simples. Ambos foram desenvolvidos para sistemas com suporte a sockets (Linux, macOS).
+Este repositório contém dois projetos em C que implementam um **navegador HTTP** e um **servidor HTTP** simples. Ambos foram desenvolvidos para sistemas com suporte a sockets (Linux).
+
+O **navegador HTTP** é um programa que funciona como um navegador simples em modo texto, permitindo acessar sites e baixar arquivos especificados pelo usuário. 
+Ele recebe o endereço do site, separa o nome do servidor e o caminho do arquivo, ajusta a porta se necessário e estabelece uma conexão com o servidor. 
+Após enviar a solicitação pelo protocolo HTTP, o programa lê a resposta, exibe os cabeçalhos na tela para informar se houve algum erro, e salva o conteúdo em um arquivo local com nome baseado no recurso solicitado ou em index.html por padrão. 
+Ao final, fecha a conexão e confirma que o arquivo foi salvo, permitindo que o usuário baixe qualquer recurso indicado de forma automática.
+
+O **servidor HTTP** funciona como um servidor de páginas, permitindo que clientes acessem arquivos de um diretório específico. 
+Ele recebe o caminho do diretório e espera conexões, lendo os pedidos feitos pelos clientes. 
+Se o arquivo solicitado existir, ele é enviado; se houver um diretório sem index.html, o servidor gera uma página listando os arquivos disponíveis. 
+Em caso de erro, como arquivo não encontrado, uma mensagem é enviada. 
+O servidor continua ativo, respondendo a novos pedidos e permitindo acessar de forma simples e organizada o conteúdo do diretório.
 
 ---
 
