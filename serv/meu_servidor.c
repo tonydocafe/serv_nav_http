@@ -39,6 +39,16 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+
+
+// TIME_WAIT
+    int opt = 1;
+    if (setsockopt(servidor, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0) {
+        perror("setsockopt(SO_REUSEADDR) failed");
+    }
+
+
+
     addr_servidor.sin_family = AF_INET;
     addr_servidor.sin_addr.s_addr = INADDR_ANY;
     addr_servidor.sin_port = htons(PORTA);
@@ -84,7 +94,7 @@ int main(int argc, char *argv[]) {
             continue;
         }
 
-        //-------envio, tratamento e caminho completo para o arquivo servido-----------  
+//-------envio, tratamento e caminho completo para o arquivo servido-----------  
         char caminho_completo[1024];
         snprintf(caminho_completo, sizeof(caminho_completo), "%s%s", diretorio_base,
                  strcmp(caminho, "/") == 0 ? "/index.html" : caminho);
@@ -173,8 +183,8 @@ void enviar_listagem(int cliente, const char *dir_caminho) {
             continue;
 
         snprintf(body, sizeof(body),
-                 "<li><a href=\"%s\">%s</a></li>",
-                 ent->d_name, ent->d_name);
+                 "<li><a href=\"new/%s\">%s</a></li>",
+                  ent->d_name, ent->d_name);
         send(cliente, body, strlen(body), 0);
     }
 
