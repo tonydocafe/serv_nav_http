@@ -1,17 +1,36 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -O2
+CFLAGS = -Wall -Wextra -O2 -Ihttp -Irede -Iurl
 
-all: meu_navegador
+TARGET = meu_navegador
 
-meu_navegador: meu_navegador.c
-	$(CC) $(CFLAGS) -o meu_navegador meu_navegador.c
+OBJ = main.o http/http.o rede/rede.o url/url.o
+
+
+all: $(TARGET)
+
+
+$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET)
+
+
+main.o: main.c
+	$(CC) $(CFLAGS) -c main.c
+
+
+http/http.o: http/http.c http/http.h
+	$(CC) $(CFLAGS) -c http/http.c -o http/http.o
+
+
+rede/rede.o: rede/rede.c rede/rede.h
+	$(CC) $(CFLAGS) -c rede/rede.c -o rede/rede.o
+
+
+url/url.o: url/url.c url/url.h
+	$(CC) $(CFLAGS) -c url/url.c -o url/url.o
+
 
 clean:
-	
-	@for file in *; do \
-		if [ "$$file" != "Makefile" ] && [ "$$file" != "meu_navegador.c" ]; then \
-			rm -rf "$$file"; \
-		fi; \
-	done
+	rm -f $(TARGET) index.html $(OBJ)
+
 
 .PHONY: all clean
